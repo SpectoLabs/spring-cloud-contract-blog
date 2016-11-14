@@ -1,0 +1,3 @@
+rootProject.name = 'spring-cloud-contract-blog'
+include 'account-service'
+include 'subscription-service'
