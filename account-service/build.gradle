@@ -46,4 +46,6 @@ dependencyManagement {
 
 contracts {
 	packageWithBaseClasses = 'com.demo.account.contracts'
+//	A hack to get around using rootDir in multi-project build
+	contractsDslDir = file("${project.projectDir}/src/test/resources/contracts/")
 }
