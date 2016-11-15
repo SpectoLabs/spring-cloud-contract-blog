@@ -1,6 +1,4 @@
 .idea
 .gradle
 build
-out/
-/account-service/out/
-/subscription-service/out/
+out
