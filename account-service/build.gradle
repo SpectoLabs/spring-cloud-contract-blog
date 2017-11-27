@@ -2,8 +2,8 @@ group 'com.demo'
 
 buildscript {
 	ext {
-		springBootVersion = '1.4.1.RELEASE'
-		springCloudContractVersion = '1.0.1.RELEASE'
+		springBootVersion = '1.5.8.RELEASE'
+		springCloudContractVersion = '1.2.1.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -15,7 +15,7 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 apply plugin: 'spring-cloud-contract'
 apply plugin: 'idea'
 apply plugin: 'maven'
@@ -41,7 +41,7 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Camden.SR1"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Edgware.RELEASE"
 	}
 }
 
@@ -49,4 +49,9 @@ contracts {
 	packageWithBaseClasses = 'com.demo.account.contracts'
 //	A hack to get around using rootDir in multi-project build
 	contractsDslDir = file("${project.projectDir}/src/test/resources/contracts/")
+}
+
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.5'
 }

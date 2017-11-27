@@ -1,7 +1,7 @@
 package com.demo.account.contracts;
 
 import com.demo.account.AccountServiceApplication;
-import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc;
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.runner.RunWith;
